@@ -1,7 +1,7 @@
 import random
 
 
-def random_numbers(count, low=0, high=1000):
+def random_numbers(count, low=0, high=100):
     return [random.randint(low, high) for _ in range(count)]
 
 
@@ -50,26 +50,13 @@ def bubble_sort(numbers):
     return arr
 
 def main():
-    short_list = [5, 1, 4, 2, 8]
-    sorted_short = selection_sort(short_list)
-
-    print("--- Test na krátkém seznamu ---")
-    print(f"Původní seznam:  {short_list}")
-    print(f"Seřazený seznam: {sorted_short}\n")
-
-    random_list = random_numbers(20)
+    random_list = random_numbers(200)
     sorted_random = selection_sort(random_list)
 
-    print("--- Test na náhodném seznamu (20 čísel) ---")
+    print("--- Test na náhodném seznamu  ---")
     print(f"Původní seznam:  {random_list}")
     print(f"Seřazený seznam: {sorted_random}")
-
-    random_list2 = random_numbers(10)
-
-    print(f"Původní seznam: {random_list2}")
-
-    sorted_random_bub = bubble_sort(random_list2)
-
+    sorted_random_bub = bubble_sort(random_list)
     print(f"Seřazený seznam: {sorted_random_bub}")
 
 if __name__ == "__main__":
